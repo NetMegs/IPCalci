@@ -1,0 +1,44 @@
+{
+  "name": "ipcalci",
+  "version": "1.0.0-beta",
+  "description": "High-performance, developer-friendly library for parsing, validating, and calculating IPv4 and IPv6 subnets, network addresses, usable host ranges, and CIDR notations.",
+  "keywords": [
+    "ip",
+    "ipv4",
+    "ipv6",
+    "subnet",
+    "calculator",
+    "cidr",
+    "networking",
+    "network",
+    "subnet-mask",
+    "ip-calculator",
+    "ipcalci"
+  ],
+  "license": "MIT",
+  "author": "Kasali",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && bun build src/index.ts --outfile dist/index.mjs --format esm",
+    "test": "bun test",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
